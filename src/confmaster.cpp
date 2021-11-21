@@ -1,6 +1,6 @@
 #include "confmaster/confmaster.hpp"
 
-namespace rnd{
+namespace am{
 namespace conf{
 
     bool confmaster::load_config_file(){

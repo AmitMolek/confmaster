@@ -1,5 +1,5 @@
-#ifndef CONFMASTER_CONFMASTER_HPP
-#define CONFMASTER_CONFMASTER_HPP
+#ifndef AM_CONFMASTER_CONFMASTER_HPP
+#define AM_CONFMASTER_CONFMASTER_HPP
 
 #include <cstdint>
 #include <string>
@@ -9,9 +9,8 @@
 
 #include "nlohmann/json.hpp"
 
-namespace rnd{
+namespace am{
 namespace conf{
-
     class confmaster{
         /**
          * @brief The purpose of this class is to parse json config files

@@ -13,7 +13,7 @@ int main(int argc, char *argv[]){
     }
 
     std::string config_path = std::string(argv[1]);
-    rnd::conf::confmaster cmaster(config_path);
+    am::conf::confmaster cmaster(config_path);
     if (!cmaster.is_valid()){
         std::cerr << "Failed to open/parse config file: " << cmaster.error() << std::endl;
         return EXIT_FAILURE;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
         auto result = cmaster.parse<int, std::string>({"id","name"});
         std::cout << "id=" << std::get<0>(result) << std::endl;
         std::cout << "name=" << std::get<1>(result) << std::endl;
-    }catch(rnd::conf::confmaster::base_error_type& e){
+    }catch(am::conf::confmaster::base_error_type& e){
         std::cerr << "Error occured while parsing config file: " << e.what() << std::endl;
         return EXIT_FAILURE;
     }
